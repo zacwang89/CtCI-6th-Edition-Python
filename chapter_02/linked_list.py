@@ -18,6 +18,7 @@ class LinkedList:
         if values is not None:
             self.add_multiple(values)
 
+    # https://www.programiz.com/python-programming/generator
     def __iter__(self):
         current = self.head
         while current:

@@ -20,6 +20,7 @@ class Stack:
         # in python the `len` function is preferred to `size` methods
         return len(self.items)
 
+    # this is very important, so instance can be used in if condition, like chapter_03/p02_stack_min.py L11
     def __bool__(self):
         # lets us use the stack as a conditional
         return bool(self.items)

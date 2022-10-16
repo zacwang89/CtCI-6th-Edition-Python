@@ -1,6 +1,7 @@
 # O(N)
 import unittest
 from collections import Counter
+import time
 
 
 def check_permutation_by_sort(s1, s2):
@@ -60,8 +61,10 @@ class Test(unittest.TestCase):
     def test_cp(self):
         # true check
         for check_permutation in self.testable_functions:
+            start = time.perf_counter()
             for str1, str2, expected in self.test_cases:
                 assert check_permutation(str1, str2) == expected
+            print(f'{check_permutation.__name__}: {(time.perf_counter()-start)*1000}')
 
 
 if __name__ == "__main__":

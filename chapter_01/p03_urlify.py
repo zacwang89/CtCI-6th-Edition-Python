@@ -25,6 +25,10 @@ def urlify_pythonic(text, length):
     """solution using standard library"""
     return text[:length].replace(" ", "%20")
 
+# remove multiple spaces
+import re
+re.sub(' +', ' ', 'Mr      John Smith   ')
+
 
 class Test(unittest.TestCase):
     """Test Cases"""
