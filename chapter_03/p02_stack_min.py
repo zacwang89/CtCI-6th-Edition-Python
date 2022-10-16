@@ -7,7 +7,9 @@ class MinStack(Stack):
         self.minvals = Stack()
 
     def push(self, value):
+        # !important
         super().push(value)
+        # !important
         if not self.minvals or value <= self.minimum():
             self.minvals.push(value)
 
